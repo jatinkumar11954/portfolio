@@ -42,7 +42,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
-        server: jatinkumar.co
+        server: 20.124.8.234
         username: ${{ secrets.vmusername }}
         password: ${{ secrets.vmpassword }}
         local-dir: dist/
