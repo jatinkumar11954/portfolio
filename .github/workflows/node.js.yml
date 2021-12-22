@@ -31,14 +31,13 @@ jobs:
           npm install -g @angular/cli
           npm cache clean --force
           apt-get update
-          apt-get -qq install zip curl
           ls && pwd
           rm -rf node_modules
           npm install
           ls
           ng build
           ls -al
-
+ #apt-get -qq install zip curl
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
