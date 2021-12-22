@@ -22,10 +22,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: copy file via ssh password
-#       uses: appleboy/scp-action@master
-      run: |
-        sudo apt install sshpass
-        sshpass -p ${{ secrets.vmpassword }} scp dist/* ${{ secrets.vmusername }}@20.124.8.234:/home/azuretest/portfolio/dist/
+      run: ls
+    - name: Copy folder content recursively to remote
+      uses: garygrossgarten/github-action-scp@release
+      with:
+          local: dist
+          remote: /home/azuretest/portfolio
+          host: 20.124.8.234
+          username: ${{ secrets.vmusername }}
+          password: ${{ secrets.vmpassword }}
+
+#         sshpass -p  scp dist/* ${{ secrets.vmusername }}@20.124.8.234:/home/azuretest/portfolio/dist/
 # cp dist/* /home/azuretest/portfolio/dist/
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
