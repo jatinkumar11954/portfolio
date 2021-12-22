@@ -24,8 +24,9 @@ jobs:
     - name: copy file via ssh password
 #       uses: appleboy/scp-action@master
       run: |
-        ssh ${{ secrets.vmusername }}@20.124.8.234 -p ${{ secrets.vmpassword }}
-        cp dist/* /home/azuretest/portfolio/dist/
+        sudo apt install sshpass
+        sshpass -p ${{ secrets.vmpassword }} scp dist/* ${{ secrets.vmusername }}@20.124.8.234:/home/azuretest/portfolio/dist/
+# cp dist/* /home/azuretest/portfolio/dist/
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
 #       with:
