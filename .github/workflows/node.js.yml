@@ -21,6 +21,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: 20.124.8.234
+        username: ${{ secrets.vmusername }}
+        password: ${{ secrets.vmpassword }}
+        port: 22
+        source: "dist/*"
+        target: "/home/azuretest/portfolio/dist/"
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
 #       with:
@@ -38,14 +47,14 @@ jobs:
 #           ls -al
  #apt-get -qq install zip curl
 #  npm cache clean --force
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0
-      with:
-        server: 20.124.8.234
-        username: ${{ secrets.vmusername }}
-        password: ${{ secrets.vmpassword }}
-        local-dir: dist/
-        server-dir: /home/azuretest/portfolio/
+#     - name: 📂 Sync files
+#       uses: SamKirkland/FTP-Deploy-Action@4.2.0
+#       with:
+#         server: 20.124.8.234
+#         username: ${{ secrets.vmusername }}
+#         password: ${{ secrets.vmpassword }}
+#         local-dir: dist/
+#         server-dir: /home/azuretest/portfolio/
     - name: test
       run: ls
      
