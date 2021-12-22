@@ -13,7 +13,7 @@ export class SkillsComponent implements OnInit {
       "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications",
       "⚡ Creating application backend in Node, Express & Flask",
       "⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks",
-      "⚡ Integration of third party services such as Firebase/ Heroku/ AWS",
+      "⚡ Integration of third party services such as Firebase/ Heroku/ AWS / Azure",
       "⚡ Experience of working with Computer Vision and NLP projects"
     ]
   };
