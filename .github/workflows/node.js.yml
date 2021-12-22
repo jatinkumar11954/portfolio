@@ -34,7 +34,6 @@ jobs:
           ls && pwd
           rm -rf node_modules
           npm install
-          ls
           ng build
           ls -al
  #apt-get -qq install zip curl
