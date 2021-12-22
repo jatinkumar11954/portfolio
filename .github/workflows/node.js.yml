@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
              
     - run: |
-         # sudo npm install -g @angular/cli
+          sudo npm install -g @angular/cli
           
           sudo apt-get update
           ls && pwd
