@@ -26,23 +26,23 @@ jobs:
         ls
 #         sudo apt-get install sshpass
 #         sudo sshpass -p India@#12345 scp dist/portfolio azureuser@20.124.8.234:/home/azureuser/portfolio/
-    - name: Copy folder content recursively to remote
-      uses: garygrossgarten/github-action-scp@release
-      with:
-          local: dist/portfolio
-          remote: /portfolio
-          host: 20.124.8.234
-          username: ${{ secrets.vmusername }}
-          password: ${{ secrets.vmpassword }}
-
 #     - name: Copy folder content recursively to remote
 #       uses: garygrossgarten/github-action-scp@release
 #       with:
 #           local: dist/portfolio
-#           remote: /home/azuretest/portfolio
+#           remote: /portfolio
 #           host: 20.124.8.234
 #           username: ${{ secrets.vmusername }}
 #           password: ${{ secrets.vmpassword }}
+
+    - name: Copy folder content recursively to remote
+      uses: garygrossgarten/github-action-scp@release
+      with:
+          local: dist/portfolio
+          remote: /home/azuretest/portfolio
+          host: 20.124.8.234
+          username: ${{ secrets.vmusername }}
+          password: ${{ secrets.vmpassword }}
 
 # cp dist/* /home/azuretest/portfolio/dist/
 #     - name: Use Node.js ${{ matrix.node-version }}
