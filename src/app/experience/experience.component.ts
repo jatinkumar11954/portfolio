@@ -25,7 +25,7 @@ export class ExperienceComponent implements OnInit {
       },
       {
         role: "Computer Science & Engineering",
-        company: "GLA University",
+        company: "GNITC",
         color: "#3f703f",
         companylogo: "../../../assets/images/gla.png",
         date: "Aug 2016 – Jul 2020",

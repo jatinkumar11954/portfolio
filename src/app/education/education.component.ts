@@ -18,16 +18,16 @@ export class EducationComponent implements OnInit {
     {
       heading: "B.Tech - Computer Science & Engineering",
       duration: "2020",
-      subtitle: "GLA University, Mathura",
-      content: "Successfully completed my B.tech in Computer science from GLA University, Mathura.",
+      subtitle: "GNITC, Hyderabad",
+      content: "Successfully completed my B.tech in Computer science from GNITC, Hyderabad.",
       className1: "mar-right",
       className2: "prt_about_learnbox_left"
     },
     {
       heading: "Higher Secondary(12th)",
       duration: "2016",
-      subtitle: "CBSE Board",
-      content: "Successfully completed my intermediate studies in 2016 from Gyan Deep Sr. Secondary Public School, Shikohabad.\n" +
+      subtitle: "SSC Board",
+      content: "Successfully completed my intermediate studies in 2016 from Gyan Deep Sr. Secondary Public School, Hyderabad.\n" +
         "Major: PCM.",
       className1: "mar-left",
       className2: "prt_about_learnbox_right"
@@ -35,8 +35,8 @@ export class EducationComponent implements OnInit {
     {
       heading: "Secondary Stage(10th)",
       duration: "2014",
-      subtitle: "CBSE Board",
-      content: "Successfully completed my high school studies in 2014 from Georgions Academy, Shikohabad.",
+      subtitle: "SSC Board",
+      content: "Successfully completed my high school studies in 2014 from Vignana Bharathi High School, Hyderabad.",
       className1: "mar-right",
       className2: "prt_about_learnbox_left"
     }

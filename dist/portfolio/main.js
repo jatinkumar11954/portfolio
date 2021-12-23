@@ -2075,17 +2075,17 @@ class EducationComponent {
             // },
             {
                 heading: "B.Tech - Computer Science & Engineering",
-                duration: "2020",
-                subtitle: "GLA University, Mathura",
-                content: "Successfully completed my B.tech in Computer science from GLA University, Mathura.",
+                duration: "2021",
+                subtitle: "GNITC, Hyderabad",
+                content: "Successfully completed my B.tech in Computer science from GNITC, Hyderabad.",
                 className1: "mar-right",
                 className2: "prt_about_learnbox_left"
             },
             {
                 heading: "Higher Secondary(12th)",
                 duration: "2016",
-                subtitle: "CBSE Board",
-                content: "Successfully completed my intermediate studies in 2016 from Gyan Deep Sr. Secondary Public School, Shikohabad.\n" +
+                subtitle: "SSC Board",
+                content: "Successfully completed my intermediate studies in 2016 from Gyan Deep Sr. Secondary Public School, Hyderabad.\n" +
                     "Major: PCM.",
                 className1: "mar-left",
                 className2: "prt_about_learnbox_right"
@@ -2093,8 +2093,8 @@ class EducationComponent {
             {
                 heading: "Secondary Stage(10th)",
                 duration: "2014",
-                subtitle: "CBSE Board",
-                content: "Successfully completed my high school studies in 2014 from Georgions Academy, Shikohabad.",
+                subtitle: "SSC Board",
+                content: "Successfully completed my high school studies in 2014 from Vignana Bharathi High School, Hyderabad.",
                 className1: "mar-right",
                 className2: "prt_about_learnbox_left"
             }
@@ -2284,7 +2284,7 @@ class ExperienceComponent {
                 },
                 {
                     role: "Computer Science & Engineering",
-                    company: "GLA University",
+                    company: "GNITC",
                     color: "#3f703f",
                     companylogo: "../../../assets/images/gla.png",
                     date: "Aug 2016 – Jul 2020",
@@ -3420,21 +3420,21 @@ class TimelineComponent {
             },
             {
                 heading: "B.Tech",
-                duration: "2016 - 2020",
-                content: "Successfully completed my B.tech in Computer science from GLA University, Mathura.",
+                duration: "2017 - 2021",
+                content: "Successfully completed my B.tech in Computer science from GNITC, Hyderabad.",
                 className: "direction-l"
             },
             {
                 heading: "Intermediate",
                 duration: "2015-2016",
-                content: "Successfully completed my intermediate studies in 2016 from Gyan Deep Sr. Secondary Public School, Shikohabad.\n" +
+                content: "Successfully completed my intermediate studies in 2016 from Gyan Deep Sr. Secondary Public School, Hyderabad.\n" +
                     "Major: PCM.",
                 className: "direction-r"
             },
             {
                 heading: "High School",
                 duration: "2013-2014",
-                content: "Successfully completed my high school studies in 2014 from Georgions Academy, Shikohabad.",
+                content: "Successfully completed my high school studies in 2014 from Vignana Bharathi High School, Hyderabad.",
                 className: "direction-l"
             }
         ];
