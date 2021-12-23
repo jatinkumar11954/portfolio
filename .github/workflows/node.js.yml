@@ -30,7 +30,7 @@ jobs:
       uses: garygrossgarten/github-action-scp@release
       with:
           local: dist/portfolio
-          remote: /portfolio/dist
+          remote: ~/portfolio/dist
           host: 20.124.8.234
           username: ${{ secrets.vmusername }}
           password: ${{ secrets.vmpassword }}
