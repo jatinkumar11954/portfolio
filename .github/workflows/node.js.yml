@@ -22,8 +22,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: copy file via ssh password
-#       run: |
-#         sudo apt-get update
+      run: |
+        ls
 #         sudo apt-get install sshpass
 #         sudo sshpass -p India@#12345 scp dist/portfolio azureuser@20.124.8.234:/home/azureuser/portfolio/
     - name: Copy folder content recursively to remote
