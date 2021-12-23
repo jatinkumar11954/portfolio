@@ -6,8 +6,8 @@ name: Node.js CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
 jobs:
   build:
@@ -21,30 +21,35 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@master
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
       with:
-        host: 20.124.8.234
-        username: ${{ secrets.vmusername }}
-        password: ${{ secrets.vmpassword }}
-        port: 22
-        source: "dist/*"
-        target: "/home/azuretest/portfolio/dist/"
-#     - name: Use Node.js ${{ matrix.node-version }}
-#       uses: actions/setup-node@v2
-#       with:
-#         node-version: ${{ matrix.node-version }}
-#         cache: 'npm'
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
              
-#     - run: |
-#           sudo npm install -g @angular/cli
+    - run: |
+          sudo npm install -g @angular/cli
           
-#           sudo apt-get update
-#           ls && pwd
-#           rm -rf node_modules
-#           npm install
-#           ng build
-#           ls -al
+          sudo apt-get update
+          ls && pwd
+          rm -rf node_modules 
+          rm -rf dist
+          npm install
+          ng build
+          ls -al
+    - name: Copy folder content recursively to remote
+      uses: garygrossgarten/github-action-scp@release
+      with:
+          local: dist/portfolio
+          remote: portfolio
+          host: 20.124.8.234
+          username: ${{ secrets.vmusername }}
+          password: ${{ secrets.vmpassword }}
+
+
+
+# cp dist/* /home/azuretest/portfolio/dist/
+
  #apt-get -qq install zip curl
 #  npm cache clean --force
 #     - name: 📂 Sync files
