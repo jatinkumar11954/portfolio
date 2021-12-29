@@ -32,7 +32,7 @@ jobs:
           
           sudo apt-get update
           ls && pwd
-          cp dist/postfolio/* .
+          cp ./dist/postfolio/* .
    #       rm -rf node_modules  sudo npm install -g @angular/cli
     #      rm -rf dist
      #     npm install
